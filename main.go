@@ -1,7 +1,8 @@
 package main
 
 import (
-	"advent_of_code_2022/days"
+	"advent_of_code_2022/days/day1"
+	"advent_of_code_2022/days/day2"
 	"fmt"
 	"os"
 	"strconv"
@@ -20,27 +21,27 @@ func main() {
 	}
 
 	var day day
-	var filename string
 	switch dayToRun {
 	case 1:
-		day = new(days.Day1)
-		filename = "inputs/day1/day1"
+		day = new(day1.Day1)
+		day.Init("inputs/day1/day1.txt")
 	case 2:
-		day = new(days.Day2)
-		filename = "inputs/day2/day2"
+		day = new(day2.Day2)
+		day.Init("inputs/day2/day2.txt")
 	default:
 		println("Day has not been written yet")
 		return
 	}
 
-	task1Result := day.Task1(filename + ".txt")
-	task2Result := day.Task2(filename + ".txt")
+	task1Result := day.Task1()
+	task2Result := day.Task2()
 
 	fmt.Println("task1: ", task1Result)
 	fmt.Println("task2: ", task2Result)
 }
 
 type day interface {
-	Task1(filename string) int
-	Task2(filename string) int
+	Init(filename string)
+	Task1() int
+	Task2() int
 }
