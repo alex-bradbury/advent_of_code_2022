@@ -24,14 +24,17 @@ func main() {
 	switch dayToRun {
 	case 1:
 		day = new(days.Day1)
-		filename = "inputs/day1"
+		filename = "inputs/day1/day1"
+	case 2:
+		day = new(days.Day2)
+		filename = "inputs/day2/day2"
 	default:
 		println("Day has not been written yet")
 		return
 	}
 
-	task1Result := day.Task1(filename + "_task1.txt")
-	task2Result := day.Task2(filename + "_task2.txt")
+	task1Result := day.Task1(filename + ".txt")
+	task2Result := day.Task2(filename + ".txt")
 
 	fmt.Println("task1: ", task1Result)
 	fmt.Println("task2: ", task2Result)
