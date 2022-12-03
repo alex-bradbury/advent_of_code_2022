@@ -3,6 +3,7 @@ package main
 import (
 	"advent_of_code_2022/days/day1"
 	"advent_of_code_2022/days/day2"
+	"advent_of_code_2022/days/day3"
 	"fmt"
 	"os"
 	"strconv"
@@ -28,6 +29,9 @@ func main() {
 	case 2:
 		day = new(day2.Day2)
 		day.Init("inputs/day2/day2.txt")
+	case 3:
+		day = new(day3.Day3)
+		day.Init("inputs/day3/day3.txt")
 	default:
 		println("Day has not been written yet")
 		return
