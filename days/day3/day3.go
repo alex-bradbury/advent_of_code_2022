@@ -23,24 +23,15 @@ func (day *Day3) Task1() int {
 		firstHalf := line[:len(line)/2]
 		secondHalf := line[len(line)/2:]
 
-		for _, s := range secondHalf {
-			if strings.ContainsRune(firstHalf, s) {
-				commonChars = append(commonChars, s)
+		for _, char := range secondHalf {
+			if strings.ContainsRune(firstHalf, char) {
+				commonChars = append(commonChars, char)
 				break
 			}
 		}
 	}
 
-	total := 0
-	for _, char := range commonChars {
-		if unicode.IsLower(char) {
-			total += (int(char) - 96)
-		} else {
-			total += (int(char) - 38)
-		}
-	}
-
-	return total
+	return getPriorityTotal(commonChars)
 }
 
 func (day *Day3) Task2() int {
@@ -63,14 +54,17 @@ func (day *Day3) Task2() int {
 		}
 	}
 
+	return getPriorityTotal(badges)
+}
+
+func getPriorityTotal(chars []rune) int {
 	total := 0
-	for _, char := range badges {
+	for _, char := range chars {
 		if unicode.IsLower(char) {
-			total += (int(char) - 96)
+			total += int(char) - 96
 		} else {
-			total += (int(char) - 38)
+			total += int(char) - 38
 		}
 	}
-
 	return total
 }
