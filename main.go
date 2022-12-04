@@ -4,6 +4,7 @@ import (
 	"advent_of_code_2022/days/day1"
 	"advent_of_code_2022/days/day2"
 	"advent_of_code_2022/days/day3"
+	"advent_of_code_2022/days/day4"
 	"fmt"
 	"os"
 	"strconv"
@@ -32,6 +33,9 @@ func main() {
 	case 3:
 		day = new(day3.Day3)
 		day.Init("inputs/day3/day3.txt")
+	case 4:
+		day = new(day4.Day4)
+		day.Init("inputs/day4/day4.txt")
 	default:
 		println("Day has not been written yet")
 		return
