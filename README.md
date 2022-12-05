@@ -5,8 +5,8 @@ My solutions (or attempts) to Advent of Code 2022 using Go!
 ## Setup
 - Clone the repository
 - Install Go:\
-  For mac: `brew install go`\
-  For windows: ...go to https://go.dev I suppose?
+  - For mac: `brew install go`\
+  - For windows: ...go to https://go.dev I suppose?
 
   
 ## Structure
