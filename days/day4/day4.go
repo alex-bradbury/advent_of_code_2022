@@ -2,6 +2,7 @@ package day4
 
 import (
 	"advent_of_code_2022/utils"
+	"fmt"
 	"strconv"
 	"strings"
 )
@@ -47,7 +48,7 @@ func (day *Day4) Init(filePath string) {
 	day.elfPairs = elfPairs
 }
 
-func (day *Day4) Task1() int {
+func (day *Day4) Task1() string {
 	println("running task 1!")
 	println("---------------")
 
@@ -74,10 +75,10 @@ func (day *Day4) Task1() int {
 		}
 	}
 
-	return containedPairs
+	return fmt.Sprint(containedPairs)
 }
 
-func (day *Day4) Task2() int {
+func (day *Day4) Task2() string {
 	println("running task 2!")
 	println("---------------")
 
@@ -104,7 +105,7 @@ func (day *Day4) Task2() int {
 		}
 	}
 
-	return overlappingPairs
+	return fmt.Sprint(overlappingPairs)
 }
 
 func makeRange(min, max int) []int {

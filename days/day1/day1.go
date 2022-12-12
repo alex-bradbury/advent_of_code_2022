@@ -2,6 +2,7 @@ package day1
 
 import (
 	"advent_of_code_2022/utils"
+	"fmt"
 	"sort"
 	"strconv"
 )
@@ -38,16 +39,16 @@ func (day *Day1) Init(filePath string) {
 	day.Totals = totals
 }
 
-func (day *Day1) Task1() int {
+func (day *Day1) Task1() string {
 	println("running task 1!")
 	println("---------------")
 
-	return day.Totals[0]
+	return fmt.Sprint(day.Totals[0])
 }
 
-func (day *Day1) Task2() int {
+func (day *Day1) Task2() string {
 	println("running task 2!")
 	println("---------------")
 
-	return day.Totals[0] + day.Totals[1] + day.Totals[2]
+	return fmt.Sprint(day.Totals[0] + day.Totals[1] + day.Totals[2])
 }
