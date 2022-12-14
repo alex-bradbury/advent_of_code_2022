@@ -11,7 +11,7 @@ func TestDay5Task1(t *testing.T) {
 		want     string
 	}{
 		{"../../inputs/day5/day5_test2.txt", "CMZ"},
-		{"../../inputs/day5/day5_test1.txt", "TPL"},
+		{"../../inputs/day5/day5_test1.txt", "GPZ"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.fileName, func(t *testing.T) {
@@ -30,7 +30,9 @@ func TestDay5Task2(t *testing.T) {
 		fileName string
 		want     string
 	}{
-		{"../../inputs/day5/day5_test1.txt", "MCD"},
+		{"../../inputs/day5/day5_test1.txt", "PGL"},
+		{"../../inputs/day5/day5_test2.txt", "MCD"},
+		{"../../inputs/day5/day5_test3.txt", "PCQCVPPVZ"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.fileName, func(t *testing.T) {

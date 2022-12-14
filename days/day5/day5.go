@@ -96,7 +96,7 @@ func (day *Day5) Task2() string {
 		for i := 0; i < amount; i++ {
 			cratesToMove = append(cratesToMove, "")
 		}
-		for i := 0; i < actions[0]; i++ {
+		for i := 0; i < amount; i++ {
 			popped, _ := day.crates[actions[1]-1].Pop()
 			cratesToMove[amount-1] = popped
 			amount--
