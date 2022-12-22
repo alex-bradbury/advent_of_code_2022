@@ -2,6 +2,7 @@ package day2
 
 import (
 	"advent_of_code_2022/utils"
+	"fmt"
 	"strings"
 )
 
@@ -26,7 +27,7 @@ func (day *Day2) Init(filePath string) {
 	day.pairs = pairs
 }
 
-func (day *Day2) Task1() int {
+func (day *Day2) Task1() string {
 	println("running task 1!")
 	println("---------------")
 
@@ -44,10 +45,10 @@ func (day *Day2) Task1() int {
 		points += pair.getPoints()
 	}
 
-	return points
+	return fmt.Sprint(points)
 }
 
-func (day *Day2) Task2() int {
+func (day *Day2) Task2() string {
 	println("running task 2!")
 	println("---------------")
 
@@ -65,7 +66,7 @@ func (day *Day2) Task2() int {
 		points += pair.whatToPlay()
 	}
 
-	return points
+	return fmt.Sprint(points)
 }
 
 func (pair resultPair) getPoints() int {

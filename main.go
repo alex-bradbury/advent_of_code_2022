@@ -5,6 +5,7 @@ import (
 	"advent_of_code_2022/days/day2"
 	"advent_of_code_2022/days/day3"
 	"advent_of_code_2022/days/day4"
+	"advent_of_code_2022/days/day5"
 	"fmt"
 	"os"
 	"strconv"
@@ -36,6 +37,9 @@ func main() {
 	case 4:
 		day = new(day4.Day4)
 		day.Init("inputs/day4/day4.txt")
+	case 5:
+		day = new(day5.Day5)
+		day.Init("inputs/day5/day5.txt")
 	default:
 		println("Day has not been written yet")
 		return
@@ -50,6 +54,6 @@ func main() {
 
 type day interface {
 	Init(filename string)
-	Task1() int
-	Task2() int
+	Task1() string
+	Task2() string
 }

@@ -1,17 +1,17 @@
-package day4
+package day5
 
 import (
 	"testing"
 )
 
-func TestDay4Task1(t *testing.T) {
-	day := new(Day4)
+func TestDay5Task1(t *testing.T) {
+	day := new(Day5)
 	var tests = []struct {
 		fileName string
 		want     string
 	}{
-		{"../../inputs/day4/day4_test1.txt", "2"},
-		{"../../inputs/day4/day4_test2.txt", "3"},
+		{"../../inputs/day5/day5_test2.txt", "CMZ"},
+		{"../../inputs/day5/day5_test1.txt", "GPZ"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.fileName, func(t *testing.T) {
@@ -24,18 +24,22 @@ func TestDay4Task1(t *testing.T) {
 	}
 }
 
-func TestDay4Task2(t *testing.T) {
-	day := new(Day4)
+func TestDay5Task2(t *testing.T) {
+	day := new(Day5)
 	var tests = []struct {
 		fileName string
 		want     string
 	}{
-		{"../../inputs/day4/day4_test1.txt", "4"},
-		{"../../inputs/day4/day4_test2.txt", "6"},
+		{"../../inputs/day5/day5_test1.txt", "PGL"},
+		{"../../inputs/day5/day5_test2.txt", "MCD"},
+		{"../../inputs/day5/day5_test3.txt", "PCQCVPPVZ"},
+		{"../../inputs/day5/day5_test4.txt", "DCQZVNPVF"},
+		{"../../inputs/day5/day5_test5.txt", "MCD"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.fileName, func(t *testing.T) {
 			day.Init(tt.fileName)
+			day.Task1()
 			ans := day.Task2()
 			if ans != tt.want {
 				t.Errorf("got %s, want %s", ans, tt.want)

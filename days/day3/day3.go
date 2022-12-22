@@ -2,6 +2,7 @@ package day3
 
 import (
 	"advent_of_code_2022/utils"
+	"fmt"
 	"strings"
 	"unicode"
 )
@@ -14,7 +15,7 @@ func (day *Day3) Init(filePath string) {
 	day.lines = utils.ReadTxtFile(filePath)
 }
 
-func (day *Day3) Task1() int {
+func (day *Day3) Task1() string {
 	println("running task 1!")
 	println("---------------")
 
@@ -34,7 +35,7 @@ func (day *Day3) Task1() int {
 	return getPriorityTotal(commonChars)
 }
 
-func (day *Day3) Task2() int {
+func (day *Day3) Task2() string {
 	println("running task 2!")
 	println("---------------")
 
@@ -57,7 +58,7 @@ func (day *Day3) Task2() int {
 	return getPriorityTotal(badges)
 }
 
-func getPriorityTotal(chars []rune) int {
+func getPriorityTotal(chars []rune) string {
 	total := 0
 	for _, char := range chars {
 		if unicode.IsLower(char) {
@@ -66,5 +67,5 @@ func getPriorityTotal(chars []rune) int {
 			total += int(char) - 38
 		}
 	}
-	return total
+	return fmt.Sprint(total)
 }
