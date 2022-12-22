@@ -33,10 +33,13 @@ func TestDay5Task2(t *testing.T) {
 		{"../../inputs/day5/day5_test1.txt", "PGL"},
 		{"../../inputs/day5/day5_test2.txt", "MCD"},
 		{"../../inputs/day5/day5_test3.txt", "PCQCVPPVZ"},
+		{"../../inputs/day5/day5_test4.txt", "DCQZVNPVF"},
+		{"../../inputs/day5/day5_test5.txt", "MCD"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.fileName, func(t *testing.T) {
 			day.Init(tt.fileName)
+			day.Task1()
 			ans := day.Task2()
 			if ans != tt.want {
 				t.Errorf("got %s, want %s", ans, tt.want)
