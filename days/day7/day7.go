@@ -74,7 +74,6 @@ func (day *Day) Init(filePath string) {
 	if currentIndex > -1 {
 		day.directories[currentIndex].size = currentDirSize
 	}
-	fmt.Println(day.directories)
 }
 
 func (day *Day) Task1() string {
@@ -97,8 +96,6 @@ func (day *Day) Task2() string {
 	println("---------------")
 
 	remainingSpace := 70000000 - calcSizeOfDir(day.directories[0], day.directories)
-	println(calcSizeOfDir(day.directories[0], day.directories))
-	println(remainingSpace)
 	lowestSize := 70000000
 	spaceNeeded := 30000000 - remainingSpace
 	for _, directory := range day.directories {
