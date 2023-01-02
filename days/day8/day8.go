@@ -30,7 +30,6 @@ func (day *Day) Init(filePath string) {
 			day.trees[i][j] = int(numInt)
 		}
 	}
-	fmt.Println(day.trees)
 }
 
 func (day *Day) Task1() string {
