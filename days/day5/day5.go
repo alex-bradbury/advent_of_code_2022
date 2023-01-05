@@ -56,7 +56,6 @@ func (day *Day5) Task1() string {
 	copy(workingCrates, day.crates)
 	startingCrates := make([]Stack, len(day.crates))
 	copy(startingCrates, day.crates)
-	//fmt.Println(startingCrates)
 
 	for _, instruction := range day.instructions {
 		re := regexp.MustCompile("[0-9]+")
@@ -80,8 +79,6 @@ func (day *Day5) Task1() string {
 	for _, crate := range workingCrates {
 		result = result + crate[len(crate)-1]
 	}
-	// day.crates = startingCrates
-	// fmt.Println(startingCrates)
 	fmt.Println(day.crates)
 
 	return result
