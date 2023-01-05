@@ -26,6 +26,7 @@ func (day *Day) Init(filePath string) {
 	println("---------------")
 
 	currentMonkey := -1
+	regex, _ := regexp.Compile("[0-9]+")
 	lines := utils.ReadTxtFile(filePath)
 	for _, line := range lines {
 		line = strings.TrimSpace(line)
@@ -49,7 +50,7 @@ func (day *Day) Init(filePath string) {
 			case "Operation:":
 				var op func(int) int
 				opNum := 0
-				if match, _ := regexp.Match("[0-9]+", []byte(parts[5])); match {
+				if regex.Match([]byte(parts[5])) {
 					opNum, _ = strconv.Atoi(parts[5])
 				}
 				switch parts[4] {
