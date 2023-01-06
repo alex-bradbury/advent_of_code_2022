@@ -1,16 +1,16 @@
-package day11
+package day12
 
 import (
 	"testing"
 )
 
-func TestDay11Task1(t *testing.T) {
+func TestDay12Task1(t *testing.T) {
 	day := new(Day)
 	var tests = []struct {
 		fileName string
 		want     string
 	}{
-		{"../../inputs/day11/day11_test1.txt", "10605"},
+		{"../../inputs/day12/day12_test1.txt", "31"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.fileName, func(t *testing.T) {
@@ -23,13 +23,13 @@ func TestDay11Task1(t *testing.T) {
 	}
 }
 
-func TestDay11Task2(t *testing.T) {
+func TestDay12Task2(t *testing.T) {
 	day := new(Day)
 	var tests = []struct {
 		fileName string
 		want     string
 	}{
-		{"../../inputs/day11/day11_test1.txt", "2713310158"},
+		{"../../inputs/day12/day12_test1.txt", "29"},
 	}
 	for _, tt := range tests {
 		t.Run(tt.fileName, func(t *testing.T) {
