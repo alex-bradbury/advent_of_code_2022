@@ -68,6 +68,9 @@ func main() {
 	case 12:
 		day = new(day12.Day)
 		day.Init("inputs/day12/day12.txt")
+	case 13:
+		day = new(day12.Day)
+		day.Init("inputs/day12/day13.txt")
 	default:
 		println("Day has not been written yet")
 		return
